@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <title>
+            Tezo
+        </title>
+        <link rel="stylesheet" href="task3css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+        <script type="text/javascript" src="./scripts/onclickEvents.js"></script>
+        <script type="text/javascript" src="./scripts/stablePane.js"></script>
+        <script type="text/javascript" src="./scripts/paneShrinkExpand.js"></script>
+    </head>
+
+    <body>
+        <div class="tezo-portal">
+            <div class="left-pane">
+                <div>
+                    <div class="tezo-logo-container">
+                        <img src="./images/TezoLogo.svg" alt="tezo logo" class="pointer tezo-img">
+                        <img src="./images/handle.png" alt="handle" class="logo-handle pointer" onclick="paneShrink()">
+                    </div>
+                    <h5 class="text-grey all-margin">ALL</h5>
+                    <div class="all-dashboard">
+                        <img src="./images/Horizontal nav/Dashboard.svg" alt="dashboard" class="all-icons">
+                        <a href="#" class="text-dark-grey-all">Dashboard</a>
+                    </div>
+                    <div class="row-flex">
+                        <div class="all-dashboard pressed-button-color-change pointer" onclick="window.location.href='Employee.html'">
+                            <img src="./images/Horizontal nav/Employees.svg" alt="employees" class="all-icons">
+                            <a href="Employee.html" class="text-dark-grey-all pressed-button-color-change"> Employees</a>
+                        </div>
+                        <div class="select-forward-color"></div>
+                    </div>
+                    
+                    <h5 class="text-grey  role-user-margin">ROLE / USER MANAGEMENT</h5>
+                    <div class="roles-access-right pointer" onclick="window.location.href='Roles.html'">
+                        <a href="Roles.html" class="text-dark-grey"><span><img src="./images/Horizontal nav/Roles.svg" alt="roles" class="all-icons-role-user"></span> Roles</a>
+                        <img src="./images/right scroll icon.png" alt="greater than" class="gt-img pointer">
+                    </div>
+                    <div class="roles-access-right">
+                        <a href="#" class="text-dark-grey"><span><img src="./images/Horizontal nav/assign user.svg" alt="employees" class="all-icons-role-user"></span> Access rights</a>
+                        <img src="./images/right scroll icon.png" alt="greater than" class="gt-img pointer">
+                    </div>
+                </div>
+                <div class="new-update-container">
+                    <h4 class="new-update-txt">Install new update 2.3.1A</h4>
+                    <p class="new-update-sub-txt">Allow to launch the new update for the AD Application</p>
+                    <button class="update-dismiss-btn pointer">Dismiss</button>
+                    <button class="update-accept-btn pointer">Accept</button>
+                </div>
+            </div>
+            <div class="left-pane-shrink">
+                <div class="tezo-logo-container">
+                    <img src="./images/smalltezologo.png" alt="tezo logo" class="small-tezo-logo">
+                    <img src="./images/handle.png" alt="handle" class="shrink-handle pointer" onclick="paneExpand()">
+                </div>
+                <h5 class="text-grey shrink-all-margin">ALL</h5>
+                <img src="./images/Horizontal nav/Dashboard.svg" alt="dashboard" class="shrink-all-icons"><br>
+                <img src="./images/Horizontal nav/employees.svg" alt="employees" class="shrink-all-icons" onclick="window.location.href='Employee.html'">
+                <h5 class="text-grey  shrink-role-margin">ROLE </h5>
+                <img src="./images/Horizontal nav/Roles.svg" alt="roles" class="shrink-role-icons" onclick="window.location.href='Roles.html'"><br>
+                <img src="./images/Horizontal nav/assign user.svg" alt="employees" class="shrink-role-icons">
+            </div>
+
+            <div class="right-pane">
+
+                <div class="pop-up-container">
+                    <div class="emp-success-popup">
+                        <h3 class="popup-text">Employee Added Successfully</h3>
+                    </div>
+                </div>
+
+                
+                <div class="search-bar">
+                    <input type="text" class="search-inp" placeholder="Search">
+                    <div class="user-icons">
+                        <div class="active-icon"></div>
+                        <img src="./images/Vertical Navbar/Language.svg" alt="language" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Categories.svg" alt="categories" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Mode.svg" alt="mode" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Notifications.svg" alt="Notifications" class="search-icons pointer">
+                        <img src="./images/user-icon.png" alt="" class="user-icon-img pointer">
+                        <div class="profile-user-name-role pointer">
+                            <p class="profile-user-name"> John Abraham</p>
+                            <p class="profile-user-role"> Admin</p>
+                        </div>
+                        <img src="./images/drop-down-25.svg" alt="" class="drop-down-icon pointer">
+                    </div>
+                </div>
+                <div class="emp-export-add-btns">
+                    <h1 class="emp-heading emp-extra-padding">Employees</h1>
+                    <div class="export-add-btn">
+                        <button class="export-btn pointer" onclick="exportEmpInfo()">EXPORT</button>
+                        <button class="add-emp-btn pointer" onclick="goToAddEmployee()">ADD EMPLOYEE</button>
+                    </div>
+                </div>
+                <p class="emp-sub-txt">Find all of your company's employees accounts and their associated roles</p>
+
+                <div class="char-find">
+                    <img src="./images/Interface/filter-black.svg" alt="filter logo" class="filter-logo pointer" onclick="stopFilter()">
+                    <!-- <button class="char-btn" onclick="buttonCharFind('A')">A</button>
+                    <button class="char-btn" onclick="buttonCharFind('B')">B</button>
+                    <button class="char-btn" onclick="buttonCharFind('C')">C</button>
+                    <button class="char-btn" onclick="buttonCharFind('D')">D</button>
+                    <button class="char-btn" onclick="buttonCharFind('E')">E</button>
+                    <button class="char-btn" onclick="buttonCharFind('F')">F</button>
+                    <button class="char-btn" onclick="buttonCharFind('G')">G</button>
+                    <button class="char-btn" onclick="buttonCharFind('H')">H</button>
+                    <button class="char-btn" onclick="buttonCharFind('I')">I</button>
+                    <button class="char-btn" onclick="buttonCharFind('J')">J</button>
+                    <button class="char-btn" onclick="buttonCharFind('K')">K</button>
+                    <button class="char-btn" onclick="buttonCharFind('L')">L</button>
+                    <button class="char-btn" onclick="buttonCharFind('M')">M</button>
+                    <button class="char-btn" onclick="buttonCharFind('N')">N</button>
+                    <button class="char-btn" onclick="buttonCharFind('O')">O</button>
+                    <button class="char-btn" onclick="buttonCharFind('P')">P</button>
+                    <button class="char-btn" onclick="buttonCharFind('Q')">Q</button>
+                    <button class="char-btn" onclick="buttonCharFind('R')">R</button>
+                    <button class="char-btn" onclick="buttonCharFind('S')">S</button>
+                    <button class="char-btn" onclick="buttonCharFind('T')">T</button>
+                    <button class="char-btn" onclick="buttonCharFind('U')">U</button>
+                    <button class="char-btn" onclick="buttonCharFind('V')">V</button>
+                    <button class="char-btn" onclick="buttonCharFind('W')">W</button>
+                    <button class="char-btn" onclick="buttonCharFind('X')">X</button>
+                    <button class="char-btn" onclick="buttonCharFind('Y')">Y</button>
+                    <button class="char-btn" onclick="buttonCharFind('Z')">Z</button> -->
+                </div>
+                <script>
+                    function createCharButton(char) {
+                        const button = document.createElement('button');
+                        button.classList.add('char-btn');
+                        button.textContent = char;
+                        button.addEventListener('click', function() {
+                            buttonCharFind(char);
+                        });
+
+                        return button;
+                    }
+                    const charFindContainer = document.querySelector('.char-find');
+                    for (let charCode = 65; charCode <= 90; charCode++) {
+                        const char = String.fromCharCode(charCode);
+                        charFindContainer.appendChild(createCharButton(char));
+                    }
+                </script>
+
+                <div class="filter-container">
+                    <div class="filter-logo-container">
+                        <p class="filter-txt">Filter <span><img src="./images/filter-lines.svg" alt="filter lines" class="filter-logo pointer"></span></p>
+                        <div class="dropdown">
+                            <button name="status" class="filter-ele pointer" onclick="displayDropDown(0)">
+                                Status <p class="opt-count"></p><span><img src="./images/drop-down-25.svg" alt="drop down" class="drop-down-img"></span>
+                            </button>
+                            <div class="select-options">
+                                <div class="option-flex" onclick="revealResetApplyButtons()">
+                                    <label class="option-text" for="active">Active</label>
+                                    <input id="active" type="checkbox"/>
+                                </div>
+                                <div class="option-flex" onclick="revealResetApplyButtons()">
+                                    <label class="option-text" for="inactive">Inactive</label>
+                                    <input id="inactive" type="checkbox"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button name="Location" class="filter-ele pointer location-filter" onclick="displayDropDown(1)">
+                                Location <p class="opt-count"></p><span><img src="./images/drop-down-25.svg" alt="drop down" class="drop-down-img"></span>
+                            </button>
+                            <div class="select-options">
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button name="Department" class="filter-ele pointer department-filter" onclick="displayDropDown(2)">
+                                Department <p class="opt-count"></p><span><img src="./images/drop-down-25.svg" alt="drop down" class="drop-down-img"></span>
+                            </button>
+                            <div class="select-options">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="reset-btn pointer" onclick="filterReset()" disabled>Reset</button>
+                        <button class="apply-btn pointer" onclick="filterSearch()" disabled>Apply</button>
+                    </div>
+                </div>
+
+                <!-- delete pop up generator -->
+                <div class="pop-up-container">
+                    <div class="delete-popup-container">
+                        <p class="delete-popup">Are you sure you want to delete</p>
+                        <div>
+                            <button class="popup-cancel-btn" onclick="hidePopUp()">Cancel</button>
+                            <button class="popup-ok-btn" onclick="deleteRows()">Confirm</button>
+                        </div>
+                    </div>
+                    <div class="success-del-msg-container">
+                        <p class="success-del-msg">Data Deleted Successfully</p>
+                    </div>
+                </div>
+
+
+                <div class="emp-details-container">
+                    <div class="del-container">
+                        <div class="delete-down-logo">
+                            <img src="./images/Interface/arrow-turn left -down.svg" alt="arrow down" class="arrow-left-down-img">
+                            <button class="delete-btn pointer"  onclick="showDeletePopup()">Delete</button>
+                            <!-- onclick="deleteRows()" -->
+                        </div>
+                        <img src="./images/Interface/table-add.svg" alt="table add" class="table-add-img pointer">
+                    </div>
+                    <div>
+                        <table class="emp-details-table">
+                            <tr class="first-row">
+                                <td><input type="checkbox" onclick="checkBoxChecker()" class="check_box_prop"></td>
+                                <td>USER <span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer" onclick="sortEmpData(1,'emp-name',0)"></span></td>
+                                <td>LOCATION<span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer" onclick="sortEmpData(2,2,1)"></span></td>
+                                <td>DEPARTMENT<span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer" onclick="sortEmpData(2,3,2)"></span></td>
+                                <td>ROLE<span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer" onclick="sortEmpData(2,4,3)"></span></td>
+                                <td>EMP NO<span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer" onclick="sortEmpData(2,5,4)"></span></td>
+                                <td>STATUS<span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer" onclick="sortEmpData(1,'emp-status',5)"></span></td>
+                                <td>JOIN DT<span><img src="./images/up and down arrow.png" alt="" class="up-down-img pointer"  onclick="sortEmpData(3,7,6)"></span></td>
+                                <td class="dots pointer">···</td>
+                            </tr>
+                            
+                        </table>
+                        <div class="empty-table-popup">
+                            <p class="table-popup-text">No Data Available</p>
+                        </div>
+                        <div class="edit-container">
+                            <a href="#" class="edit-opt" onclick="viewEmp()">View Details</a>
+                            <a href="#" class="edit-opt" onclick="editEmp()">Edit</a>
+                            <a href="#" class="edit-opt" onclick="optionalDelete()">Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </body>
+
+
+</html>

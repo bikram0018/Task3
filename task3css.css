@@ -1,0 +1,1030 @@
+.pointer{
+    cursor: pointer;
+}
+body{
+    background-color: rgb(252,252,252);
+}
+.tezo-portal{
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5%;
+    padding-left: 0.5%;
+}
+.left-pane{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+    height: 100%;
+    position: fixed;
+}
+.right-pane{
+    width: 85%;
+    padding-left: 19.2%;
+    padding-right: 1%;
+    height: 'device-height';
+}
+.tezo-logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
+}
+.tezo-img{
+    width: 50%;
+    padding-left: 0.5em;
+}
+.logo-handle{
+    width: 16%;
+}
+.view-all-emp{
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-decoration: none;
+    margin-right: 0.5em;
+    color: rgb(120,120,120);
+    position: relative;
+    top: 0.1em;
+}
+.emp-profile{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.3em;
+}
+.all-margin{
+    margin-bottom: 0.5em;
+    margin-top: 15%;
+    padding-left: 0.5em;
+}
+.role-user-margin{
+    margin-top: 1.7em;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+}
+.text-grey{
+    color: rgb(187,195,201);
+}
+.all-icons-role-user{
+    width: 1.4em;
+    position: relative;
+    top: 0.3em;
+}
+.all-dashboard{
+    width: 90%;
+    padding-left: 0.5em;
+    padding-top: 0px;
+    padding-bottom: 0.7em;
+}
+.text-dark-grey-all{
+    color: rgb(126,130,134);
+    text-decoration: none;
+}
+.text-dark-grey{
+    color: rgb(126,130,134);
+    text-decoration: none;
+    margin-bottom: 0.4em;
+}
+.all-icons{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    position: relative;
+    top: 0.5em;
+}
+.new-update-container{
+    background-color: rgb(254,246,246);
+    padding: 5%;
+    padding-right: 4%;
+    border-radius: 5px;
+}
+.gt-img{
+    width: 10%;
+    height: 1em;
+    opacity: 0.3;
+    position: relative;
+    top: 0.59em;
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+}
+.role-gt-img{
+    width: 1em;
+    height: 0.8em;
+    opacity: 0.5;
+}
+.hover-color:hover{
+    background-color: rgb(255,244,244);
+}
+.drop-down-icon{
+    width: 2.5%;
+}
+.roles-access-right{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.5em;
+}
+.user-icon-img{
+    width:5%;
+    height: 90%;
+    padding-right: 0.5%;
+}
+.profile-user-name-role{
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.5%;
+}
+.profile-user-name{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+.profile-user-role{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.emp-heading{
+    font-size: 20px;
+    color: rgb(83,101,118);
+    padding-top: 1em;
+}
+.emp-extra-padding{
+    padding-bottom: 0.3em;
+}
+.new-update-txt{
+    color: rgb(245,81,81);
+    margin-top: 3%;
+    margin-bottom: 2px;
+}
+.new-update-sub-txt{
+    color: rgb(198, 198, 198);
+    font-size: 15px;
+}
+.update-dismiss-btn{
+    width: 35%;
+    height: 25%;
+    background-color: rgb(253,230,230);
+    color: rgb(245,96,96);
+    margin-bottom: 10%;
+    border-radius: 5px;
+    border: none;
+}
+.update-accept-btn{
+    width: 35%;
+    height: 25%;
+    background-color: rgb(244,72,72);
+    color: white;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    border: none;
+}
+.user-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 1px rgb(232, 232, 233);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.search-inp{
+    background-image: url(./images/bx-search.png);
+    background-repeat: no-repeat;
+    padding-left: 5%;
+    background-size: 2em;
+    background-position: 7% 50%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+.search-inp:focus{
+    outline: none;
+}
+.row-flex{
+    display: flex;
+    column-gap: 4%;
+}
+.select-forward-color{
+    background-color: rgba(244,72,72);
+    width:0.2em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.emp-export-add-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.export-add-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.export-btn{
+    background-image: url(./images/Masked\ Icon.png);
+    background-repeat: no-repeat;
+    background-position: 15% 38%;
+    height: 50%;
+    margin-top: 13%;
+    padding-left: 2.8em;
+    padding-right: 1.2em;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(150,161,175);
+    border: 1.5px solid rgb(150,161,175);
+}
+.add-emp-btn{
+    background-image: url(./images/Interface/Add.svg);
+    background-repeat: no-repeat;
+    background-position: 9% 40%;
+    height: 50%;
+    margin-top: 13%;
+    margin-left: 1em;
+    padding-left: 2.8em;
+    padding-right: 1.2em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(244,72,72);
+    color: white;
+}
+.role-add-emp-btn{
+    background-image: url(./images/Interface/Add.svg);
+    background-repeat: no-repeat;
+    background-position: 9% 40%;
+    height: 50%;
+    margin-top: 19%;
+    margin-left: 1em;
+    padding-left: 2.8em;
+    padding-right: 1.2em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(244,72,72);
+    color: white;
+}
+.add-role-btn{
+    background-image: url(./images/Interface/Add.svg);
+    background-repeat: no-repeat;
+    background-position: 9% 40%;
+    height: 50%;
+    margin-top: 25%;
+    margin-left: 1em;
+    padding-left: 2.8em;
+    padding-right: 1.2em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(244,72,72);
+    color: white;
+}
+.emp-sub-txt{
+    margin-top: 0px;
+    margin-bottom: 2%;
+    position: relative;
+    bottom: 0.7em;
+    color: rgb(147,159,169);
+}
+.char-find{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.char-btn{
+    width: 2em;
+    background-color: rgb(234,235,238);
+    color: rgb(143,155,170);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.filter-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1.5px solid rgb(251,200,200);
+    margin-top: 1.5%;
+    padding: 0.7%;
+    background-color: rgb(253,242,242);
+    border-radius: 5px;
+    margin-bottom: 1.5%;
+}
+.filter-logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filter-txt{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    padding-left: 1em;
+    padding-right: 0.8em;
+    bottom: 20%;
+    color: rgb(246,106,106);
+}
+.dots{
+    padding-right: 0.5em;
+}
+.filter-ele{
+    background-color: white;
+    border: 1px solid rgb(251,217,217);;
+    border-radius: 5px;
+    padding-right: 0.5em;
+    margin-right: 0.3em;
+    width: 100%;
+    height: 100%;
+    color: rgb(86,100,127);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    outline: none;
+    position: relative;
+}
+
+.drop-down-img{
+    width: 0.9em;
+    position: relative;
+    top: 9%;
+    margin-left: 1em;
+}
+.option-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 0px 0.5px 1px rgb(234, 232, 232);
+    padding-left: 0.5em;
+}
+.dropdown{
+    margin-right: 0.3em;
+}
+/* 
+.dropdown:hover .select-options{
+    display: block;
+} */
+.select-options{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    max-height: 15em;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 0.5px 1px rgb(234, 232, 232);
+    border-radius: 5px;
+}
+.select-options label{
+    margin-top: 0.45em;
+    margin-bottom: 0.45em;
+}
+.filter-logo{
+    position: relative;
+    top: 20%;
+    border-radius: 5px;
+}
+.reset-btn{
+    height: 100%;
+    text-align: center;
+    margin-right: 0.5em;
+    width: 5em;
+    background-color: white;
+    color: rgb(255,147,155);
+    border: 1.5px solid rgb(255,121,131);
+    border-radius: 5px;
+    opacity: 0.5;
+}
+.apply-btn{
+    height: 100%;
+    text-align: center;
+    margin-right: 0.2em;
+    width: 5em;
+    background-color: rgba(244,72,72);
+    color: white;
+    border:none;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+.up-down-img{
+    width: 1em;
+    position: relative;
+    top: 0.15em;
+}
+.emp-details-container{
+    box-shadow: 0px 0px 3px 1px rgb(237, 237, 237);
+    border-radius: 5px;
+}
+.emp-icon-img{
+    width: 2.4em;
+    height: 2.4em;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.emp-name{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.emp-name-role-details{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: rgb(63,63,63);
+}
+
+.emp-mail{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+.emp-role{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+.emp-role-details{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: rgb(105,105,105);
+}
+.extra-margin{
+    margin-left: 0.12em;
+}
+.role-desc{
+    margin-top: 0px;
+    margin-bottom: 0.4em;
+}
+.text-grey-clr{
+    color: rgb(109,122,145);
+}
+.emp-status{
+    /* background-color: rgb(231,244,232);
+    color: rgb(80,153,129); */
+    text-align: center;
+    margin-right: 0.7em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    border-radius: 5px;
+}
+.table-row{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.del-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.delete-btn{
+    width: 5em;
+    height: 90%;
+    border-radius: 5px;
+    background-color: rgb(248,145,145);
+    color: white;
+    border: none;
+    margin-top: 0.5em;
+    position: relative;
+    bottom: 17%;
+}
+.arrow-left-down-img{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    position: relative;
+    top: 15%;
+}
+.table-add-img{
+    margin-right: 1em;
+    width: 2%;
+    margin-top: 0.4em;
+}
+.active-icon{
+    width: 0.5em;
+    height: 0.5em;
+    background-color: green;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    position: relative;
+    left: 12.81em;
+    top: 60%;
+}
+.emp-details-table{
+    width: 100%;
+    border-spacing: 0px;
+}
+.emp-details-table td{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+.first-row{
+    background-color: rgb(242, 242, 244);
+    font-size: 16px;
+    color: rgb(72,88,117);
+}
+.first-row td{
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    border-top: 1.5px solid rgb(222, 221, 221);
+    font-size: 15px;
+}
+.emp-details-table td{
+    border-bottom: 1.5px solid rgb(222, 221, 221);
+}
+.emp-details-table input{
+    margin-left: 1.7em;
+}
+
+.empty-table-popup{
+    display: none;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.table-popup-text{
+    text-align: center;
+    background-color: inherit;
+    color: rgb(241, 177, 177);
+    font-size: 20px;
+}
+
+.roles-details{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 50% 50%;
+    gap: 2%;
+    row-gap: 5%;
+}
+
+.customer-service-manager{
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px rgb(226,226,226);
+}
+.customer-col-gap{
+    margin-right: 2%;
+}
+.roles-design{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.role-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.particular-role-details{
+    display: flex;
+    flex-direction: column;
+}
+.role-dept{
+    display: flex;
+}
+.view-emp-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.margin-decrease{
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    color: rgb(139,143,147);
+}
+.pressed-button-color-change{
+    color: rgb(245,96,96);
+    background-color: rgb(254,233,233);
+    border-radius: 5px;
+}
+.dept-padding{
+    padding-left: 0.4em;
+}
+.emp-count{
+    width: 6em;
+    position: relative;
+    left: 4%;
+}
+.emp-profile-margin{
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+.view-text-color{
+    color: rgba(115,115,115);
+    margin-right: 0.5em;
+}
+.logo-margin{
+    margin-right: 1em;
+}
+.emp-text-margin{
+    margin-bottom: 0px;
+}
+.configure-text-color{
+    line-height: 1.3;
+    text-align: justify;
+    color: rgb(161,170,180);
+    margin-top: 0px;
+    margin-bottom: 1em;
+}
+.edit-opt{
+    text-decoration: none;
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    box-shadow: 0px 0px 0.2px 0.5px rgb(231, 230, 230);
+    color: rgb(143,155,170);
+}
+.edit-container{
+    display: none;
+}
+.edit_container_visible{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 1px rgb(231, 230, 230);
+}
+.opt-count{
+    display: inline;
+}
+.success-del-msg-container{
+    display: none;
+    position: absolute;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(252, 245, 231);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.success-del-msg{
+    padding: 2em 3em 2em 3em;
+    text-align: center;
+    color: rgb(165, 252, 44);
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* left pane shrink css */
+
+.left-pane-shrink{
+    display: none;
+    width: 6.3%;
+    height: 100%;
+    position: fixed;
+}
+.small-tezo-logo{
+    width: 36px;
+}
+.shrink-all-margin{
+    margin-top: 1.9em;
+    margin-bottom: 0.77em;
+}
+.shrink-all-icons{
+    margin-top: 0.6em;
+    margin-bottom: 0.8em;
+}
+.shrink-role-margin{
+    margin-top: 1.4em;
+    margin-bottom: 1em;
+}
+.shrink-role-icons{
+    margin-top: 0.45em;
+    margin-bottom: 0.5em;
+}
+.shrink-handle{
+    height: 80%;
+    rotate: 180deg;
+}
+
+
+
+
+
+/* Add Employee Page styles */
+.add-employee-container{
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: row;
+    column-gap: 1.5em; */
+}
+.img-holder{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+}
+.information-holder{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.large-user-icon{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0.3px 0.1px rgb(237, 236, 236);
+    opacity: 0.6;
+}
+.input-img-edit{
+    background-color: rgba(244,72,72,255);
+    color: white;
+    padding: 0.3em 0.4em 0.3em 0.4em;
+    border-radius: 5px;
+    position: relative;
+    top: 35%;
+}
+.img-edit{
+    background-color: inherit;
+    text-align: center;
+}
+
+.emp-no-container,.first-name-container,.last-name-container,.birth-date-container,.emp-mail-container,.mobile-number-container{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+.first-name-container,.last-name-container,.emp-mail-container,.join-date-container,.job-title-container,.manager-container{
+    margin-right: 2%;
+}
+.join-date-container,.location-container,.job-title-container,.department-container,.manager-container,.project-container{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.input-width,.mandatory{
+    margin-top: 0.2em;
+    height: 1.7em;
+    outline-color: rgb(147,194,255);
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.error-msg,.just_show{
+    color: red;
+}
+.error-msg,.just_show{
+    margin: 0px;
+    margin-bottom: 1%;
+    font-size: 11px;
+    visibility: hidden;
+}
+.emp-info-input{
+    margin-top: 0.2em;
+    height: 1.7em;
+    outline-color: rgb(147,194,255);
+}
+.emp-search{
+    background-image: url(./task2/drop-down-25.svg);
+    background-repeat: no-repeat;
+    background-size: 5.3%;
+    background-position: 98% 50%;
+    width: 37%;
+    padding-left: 0.5em;
+    border: none;
+    box-shadow: 0px 0px 2px 1px rgb(221, 219, 219);
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+    height: 2.5em;
+    outline-color: rgb(147,194,255);
+}
+.personal-info-table label,.employment-info-table label,.img-edit{
+    font-size: 14px;
+}
+.per-emp-info-text{
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+}
+.main-add-employee-text{
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+.cancel-add-emp-btns{
+    display: flex;
+    justify-content: flex-end;
+}
+.add-emp-cancel-btn{
+    height: 2.4em;
+    text-align: center;
+    margin-right: 0.5em;
+    width: 16%;
+    border: none;
+    background-color: rgb(253,230,230);
+    color: rgb(245,96,96);
+    border-radius: 5px;
+}
+.add-emp-add-emp-btn{
+    height: 2.4em;
+    text-align: center;
+    margin-right: 0.2em;
+    width: 16%;
+    background-color: rgba(244,72,72);
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+.pop-up-container{
+    position: relative;
+}
+
+.delete-popup-container{
+    display: none;
+    position: absolute;
+    background-color: rgb(237, 248, 248);
+    padding: 2em;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.delete-popup{
+    text-align: center;
+    color: rgb(240, 134, 134);
+    font-size: large;
+}
+
+.popup-cancel-btn{
+    height: 2em;
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 5em;
+    background-color: white;
+    color: rgb(255,147,155);
+    border: 1.5px solid rgb(255,121,131);
+    border-radius: 5px;    
+}
+.popup-ok-btn{
+    height: 2em;
+    text-align: center;
+    margin-right: 0.2em;
+    width: 5em;
+    background-color: rgba(244,72,72);
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+.add-emp-save-btn{
+    height: 2.4em;
+    text-align: center;
+    margin-right: 0.2em;
+    width: 16%;
+    background-color: rgba(244,72,72);
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+
+.details-row-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.alert-icon{
+    width: 0.8em;
+}
+.grey-background{
+    background: rgb(244,245,247);
+}
+.option-style{
+    appearance: none;
+}
+.emp-success-popup{
+    border: 2px solid black;
+    width: fit-content;
+    margin-left: 70%;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    border: 1px solid rgb(32, 227, 32);
+}
+.popup-text{
+    margin: 0px;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+    color: rgb(58, 209, 12);
+    background-color: rgb(243, 245, 241);
+    border-radius: 3px;
+    text-align: center;
+}
+.pop-up-container{
+    position: relative;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* create new role page styles */
+
+.role-department{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    gap: 4%;
+}
+.role-input-container,.department-input-container{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+.description-container{
+    width: 60%;
+}
+.location-select-container{
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+}
+.desc-box{
+    width: 100%;
+    margin-bottom: 1.5em;
+    resize: none;
+    outline-color: rgb(147,194,255);
+}
+.image-emp-name{
+    display: flex;
+    flex-direction: row;
+}
+.emp-option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 35%;
+    box-shadow: 0px 0px 2px 1px rgb(234, 233, 233);
+    margin-bottom: 0.45em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.emp-user-icon{
+    width: 1.8em;
+    height: 1.8em;
+}
+.emp-role-select{
+    margin: 0px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+.small-width{
+    width: 15%;
+}
+.buttons-alignment{
+    margin-top: 1.5em;
+    margin-left: 41.3%;
+}
+.role-emp-details{
+    display: none;
+}
+.reduce-margin{
+    margin-top: 1.2em;
+    margin-bottom: 0.2em;
+}

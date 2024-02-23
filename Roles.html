@@ -1,0 +1,319 @@
+<html>
+    <head>
+        <title>
+            Roles
+        </title>
+        <link rel="stylesheet" href="task3css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script type="text/javascript" src="./scripts/paneShrinkExpand.js"></script>
+        <script type="text/javascript" src="./scripts/stablePane.js"></script>
+    </head>
+
+    <body>
+        <div class="tezo-portal">
+
+
+            <div class="left-pane">
+                <div>
+                    <div class="tezo-logo-container">
+                        <img src="./images/TezoLogo.svg" alt="tezo logo" class="pointer tezo-img">
+                        <img src="./images/handle.png" alt="handle" class="logo-handle pointer" onclick="paneShrink()">
+                    </div>
+                    <h5 class="text-grey all-margin">ALL</h5>
+                    <div class="all-dashboard">
+                        <img src="./images/Horizontal nav/Dashboard.svg" alt="dashboard" class="all-icons">
+                        <a href="#" class="text-dark-grey-all">Dashboard</a>
+                    </div>
+                    <div class="all-dashboard pointer" onclick="window.location.href='Employee.html'">
+                        <img src="./images/Horizontal nav/employees-black.svg" alt="employees" class="all-icons">
+                        <a href="Employee.html" class="text-dark-grey-all"> Employees</a>
+                    </div>
+                    
+                    <h5 class="text-grey  role-user-margin">ROLE / USER MANAGEMENT</h5>
+                    <div class="row-flex">
+                        <div class="roles-access-right  pressed-button-color-change pointer"  onclick="window.location.href='Roles.html'">
+                            <a href="Roles.html" class="text-dark-grey pressed-button-color-change"><span><img src="./images/Horizontal nav/Roles-red.svg" alt="roles" class="all-icons-role-user"></span> Roles</a>
+                            <img src="./images/right scroll icon.png" alt="greater than" class="gt-img pointer">
+                        </div>
+                        <div class="select-forward-color"></div>
+                    </div>
+                    <div class="roles-access-right">
+                        <a href="#" class="text-dark-grey"><span><img src="./images/Horizontal nav/assign user.svg" alt="employees" class="all-icons-role-user"></span> Access rights</a>
+                        <img src="./images/right scroll icon.png" alt="greater than" class="gt-img pointer">
+                    </div>
+
+                </div> 
+                <div class="new-update-container">
+                    <h4 class="new-update-txt">Install new update 2.3.1A</h4>
+                    <p class="new-update-sub-txt">Allow to launch the new update for the AD Application</p>
+                    <button class="update-dismiss-btn pointer">Dismiss</button>
+                    <button class="update-accept-btn pointer">Accept</button>
+                </div>
+            </div>
+
+            <div class="left-pane-shrink">
+                <div class="tezo-logo-container">
+                    <img src="./images/smalltezologo.png" alt="tezo logo" class="small-tezo-logo">
+                    <img src="./images/handle.png" alt="handle" class="shrink-handle pointer" onclick="paneExpand()">
+                </div>
+                <h5 class="text-grey shrink-all-margin">ALL</h5>
+                <img src="./images/Horizontal nav/Dashboard.svg" alt="dashboard" class="shrink-all-icons"><br>
+                <img src="./images/Horizontal nav/employees-black.svg" alt="employees" class="shrink-all-icons" onclick="window.location.href='Employee.html'">
+                <h5 class="text-grey  shrink-role-margin">ROLE </h5>
+                <img src="./images/Horizontal nav/Roles-red.svg" alt="roles" class="shrink-role-icons" onclick="window.location.href='Roles.html'"><br>
+                <img src="./images/Horizontal nav/assign user.svg" alt="employees" class="shrink-role-icons">
+            </div>
+
+            <div class="right-pane">
+
+                <div class="search-bar">
+                    <input type="text" class="search-inp" placeholder="Search">
+                    <div class="user-icons">
+                        <div class="active-icon"></div>
+                        <img src="./images/Vertical Navbar/Language.svg" alt="language" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Categories.svg" alt="categories" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Mode.svg" alt="mode" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Notifications.svg" alt="Notifications" class="search-icons pointer">
+                        <img src="./images/user-icon.png" alt="" class="user-icon-img pointer">
+                        <div class="profile-user-name-role pointer">
+                            <p class="profile-user-name"> John Abraham</p>
+                            <p class="profile-user-role"> Admin</p>
+                        </div>
+                        <img src="./images/drop-down-25.svg" alt="" class="drop-down-icon pointer">
+                    </div>
+                </div>
+
+
+                <div class="emp-export-add-btns">
+                    <h1 class="emp-heading">Roles</h1>
+                    <div class="export-add-btn">
+                        <button class="add-role-btn pointer" onclick="window.location.href='CreateNewRole.html';">ADD ROLE</button>
+                    </div>
+                </div>
+                <p class="emp-sub-txt">All the roles are configured here</p>
+
+                <div class="filter-container">
+                    <div class="filter-logo-container">
+                        <p class="filter-txt">Filter <span><img src="./images/filter-lines.svg" alt="filter lines" class="filter-logo pointer"></span></p>
+
+                        <div class="dropdown">
+                            <select name="Department" class="filter-ele pointer location-filter">
+                                <option value="" hidden>Department</option>
+                            </select>
+                        </div>
+                        
+                        <div class="dropdown">
+                            <select name="Location" class="filter-ele pointer department-filter">
+                                <option value="" hidden>Location</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="reset-btn pointer" onclick="filterReset()">Reset</button>
+                        <button class="apply-btn pointer" onclick="filterSearch()">Apply</button>
+                    </div>
+                </div>
+
+                <div class="roles-details">
+                    <div class="customer-service-manager customer-col-gap">
+                        <div class="roles-design">
+                            <h4>Customer Service Manager</h4>
+                            <img src="./images/edit.svg" alt="edit logo" class="pointer">
+                        </div>
+                        <div class="particular-role-details">
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/team_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Departemnt </p>
+                                </div>
+                                <p class="margin-decrease"> IT</p>
+                            </div>
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/location-pin-alt-1_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Location </p>
+                                </div>
+                                <p class="margin-decrease"> Hyderbad</p>
+                            </div>
+                            <div class="role-container">
+                                <p class="margin-decrease">Total Employees</p>
+                                <img src="./images/employees count image.png" alt="" class="emp-count">
+                            </div>
+                        </div>
+                        <div class="view-emp-container">
+                            <a href="RoleDetails.html" class="view-all-emp">View all employees</a>
+                            <img src="./images/Vector.svg" alt="" class="pointer">
+                        </div>
+                    </div>
+
+                    <div class="customer-service-manager customer-col-gap">
+                        <div class="roles-design">
+                            <h4>Ux Designer</h4>
+                            <img src="./images/edit.svg" alt="edit logo" class="pointer">
+                        </div>
+                        <div class="particular-role-details">
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/team_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Departemnt </p>
+                                </div>
+                                <p class="margin-decrease"> Product Engg.</p>
+                            </div>
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/location-pin-alt-1_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Location </p>
+                                </div>
+                                <p class="margin-decrease"> Hyderbad</p>
+                            </div>
+                            <div class="role-container">
+                                <p class="margin-decrease">Total Employees</p>
+                                <img src="./images/employees count image.png" alt="" class="emp-count">
+                            </div>
+                        </div>
+                        <div class="view-emp-container">
+                            <a href="RoleDetails.html" class="view-all-emp">View all employees</a>
+                            <img src="./images/Vector.svg" alt="" class="pointer">
+                        </div>
+                    </div>
+
+
+                    <div class="customer-service-manager">
+                        <div class="roles-design">
+                            <h4>Assistant Backend Developer</h4>
+                            <img src="./images/edit.svg" alt="edit logo" class="pointer">
+                        </div>
+                        <div class="particular-role-details">
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/team_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Departemnt </p>
+                                </div>
+                                <p class="margin-decrease"> UIUX</p>
+                            </div>
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/location-pin-alt-1_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Location </p>
+                                </div>
+                                <p class="margin-decrease"> Hyderbad</p>
+                            </div>
+                            <div class="role-container">
+                                <p class="margin-decrease">Total Employees</p>
+                                <img src="./images/employees count image.png" alt="" class="emp-count">
+                            </div>
+                        </div>
+                        <div class="view-emp-container">
+                            <a href="RoleDetails.html" class="view-all-emp">View all employees</a>
+                            <img src="./images/Vector.svg" alt="" class="pointer">
+                        </div>
+                    </div>
+
+
+                    <div class="customer-service-manager customer-col-gap">
+                        <div class="roles-design">
+                            <h4>Human Resource Manager</h4>
+                            <img src="./images/edit.svg" alt="edit logo" class="pointer">
+                        </div>
+                        <div class="particular-role-details">
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/team_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Departemnt </p>
+                                </div>
+                                <p class="margin-decrease"> IT</p>
+                            </div>
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/location-pin-alt-1_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Location </p>
+                                </div>
+                                <p class="margin-decrease"> Hyderbad</p>
+                            </div>
+                            <div class="role-container">
+                                <p class="margin-decrease">Total Employees</p>
+                                <img src="./images/employees count image.png" alt="" class="emp-count">
+                            </div>
+                        </div>
+                        <div class="view-emp-container">
+                            <a href="RoleDetails.html" class="view-all-emp">View all employees</a>
+                            <img src="./images/Vector.svg" alt="" class="pointer">
+                        </div>
+                    </div>
+
+
+                    <div class="customer-service-manager customer-col-gap">
+                        <div class="roles-design">
+                            <h4>Front End Developer</h4>
+                            <img src="./images/edit.svg" alt="edit logo" class="pointer">
+                        </div>
+                        <div class="particular-role-details">
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/team_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Departemnt </p>
+                                </div>
+                                <p class="margin-decrease"> Product Engg.</p>
+                            </div>
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/location-pin-alt-1_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Location </p>
+                                </div>
+                                <p class="margin-decrease"> Hyderbad</p>
+                            </div>
+                            <div class="role-container">
+                                <p class="margin-decrease">Total Employees</p>
+                                <img src="./images/employees count image.png" alt="" class="emp-count">
+                            </div>
+                        </div>
+                        <div class="view-emp-container">
+                            <a href="RoleDetails.html" class="view-all-emp">View all employees</a>
+                            <img src="./images/Vector.svg" alt="" class="pointer">
+                        </div>
+                    </div>
+
+
+                    <div class="customer-service-manager">
+                        <div class="roles-design">
+                            <h4>Senior Developer</h4>
+                            <img src="./images/edit.svg" alt="edit logo" class="pointer">
+                        </div>
+                        <div class="particular-role-details">
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/team_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Departemnt </p>
+                                </div>
+                                <p class="margin-decrease"> UIUX</p>
+                            </div>
+                            <div class="role-container">
+                                <div class="role-dept">
+                                    <img src="./images/location-pin-alt-1_svgrepo.com.svg" alt="team logo">
+                                    <p class="margin-decrease dept-padding"> Location </p>
+                                </div>
+                                <p class="margin-decrease"> Hyderbad</p>
+                            </div>
+                            <div class="role-container">
+                                <p class="margin-decrease">Total Employees</p>
+                                <img src="./images/employees count image.png" alt="" class="emp-count">
+                            </div>
+                        </div>
+                        <div class="view-emp-container">
+                            <a href="RoleDetails.html" class="view-all-emp">View all employees</a>
+                            <img src="./images/Vector.svg" alt="" class="pointer">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </body>
+</html>

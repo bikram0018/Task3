@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>
+            Add Employee
+        </title>
+        <link rel="stylesheet" href="task3css.css">
+        <link rel="stylesheet" href="additional.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script type="text/javascript" src="./scripts/employeeValidation.js"></script>
+        <script type="text/javascript" src="./scripts/paneShrinkExpand.js"></script>
+        <script type="text/javascript" src="./scripts/editEmployeeLoad.js"></script>
+        <script type="text/javascript" src="./scripts/stablePane.js"></script>
+        <script type="text/javascript" src="./scripts/viewDetials.js"></script>
+    </head>
+
+    <body>
+        <div class="tezo-portal">
+            <div class="left-pane">
+                <div>
+                    <div class="tezo-logo-container">
+                        <img src="./images/TezoLogo.svg" alt="tezo logo" class="pointer tezo-img">
+                        <img src="./images/handle.png" alt="handle" class="pointer" onclick="paneShrink()">
+                    </div>
+                    <h5 class="text-grey all-margin">ALL</h5>
+                    <div class="all-dashboard">
+                        <img src="./images/Horizontal nav/Dashboard.svg" alt="dashboard" class="all-icons">
+                        <a href="#" class="text-dark-grey-all">Dashboard</a>
+                    </div>
+                    <div class="row-flex">
+                        <div class="all-dashboard pressed-button-color-change pointer" onclick="window.location.href='Employee.html'">
+                            <img src="./images/Horizontal nav/Employees.svg" alt="employees" class="all-icons">
+                            <a href="Employee.html" class="text-dark-grey-all pressed-button-color-change"> Employees</a>
+                        </div>
+                        <div class="select-forward-color"></div>
+                    </div>
+                    <h5 class="text-grey  role-user-margin">ROLE / USER MANAGEMENT</h5>
+                    <div class="roles-access-right pointer" onclick="window.location.href='Roles.html'">
+                        <a href="Roles.html" class="text-dark-grey"><span><img src="./images/Horizontal nav/Roles.svg" alt="roles" class="all-icons-role-user"></span> Roles</a>
+                        <img src="./images/right scroll icon.png" alt="greater than" class="gt-img pointer">
+                    </div>
+                    <div class="roles-access-right">
+                        <a href="#" class="text-dark-grey"><span><img src="./images/Horizontal nav/assign user.svg" alt="employees" class="all-icons-role-user"></span> Access rights</a>
+                        <img src="./images/right scroll icon.png" alt="greater than" class="gt-img pointer">
+                    </div>
+                </div>
+                <div class="new-update-container">
+                    <h4 class="new-update-txt">Install new update 2.3.1A</h4>
+                    <p class="new-update-sub-txt">Allow to launch the new update for the AD Application</p>
+                    <button class="update-dismiss-btn pointer">Dismiss</button>
+                    <button class="update-accept-btn pointer">Accept</button>
+                </div>
+            </div>
+            <div class="left-pane-shrink">
+                <div class="tezo-logo-container">
+                    <img src="./images/smalltezologo.png" alt="tezo logo" class="small-tezo-logo">
+                    <img src="./images/handle.png" alt="handle" class="shrink-handle" onclick="paneExpand()">
+                </div>
+                <h5 class="text-grey shrink-all-margin">ALL</h5>
+                <img src="./images/Horizontal nav/Dashboard.svg" alt="dashboard" class="shrink-all-icons"><br>
+                <img src="./images/Horizontal nav/employees.svg" alt="employees" class="shrink-all-icons pointer" onclick="window.location.href='Employee.html'">
+                <h5 class="text-grey  shrink-role-margin">ROLE </h5>
+                <img src="./images/Horizontal nav/Roles.svg" alt="roles" class="shrink-role-icons pointer" onclick="window.location.href='Roles.html'"><br>
+                <img src="./images/Horizontal nav/assign user.svg" alt="employees" class="shrink-role-icons">
+            </div>
+
+            <div class="right-pane">
+                <div class="search-bar">
+                    <input type="text" class="search-inp" placeholder="Search">
+                    <div class="user-icons">
+                        <div class="active-icon"></div>
+                        <img src="./images/Vertical Navbar/Language.svg" alt="language" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Categories.svg" alt="categories" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Mode.svg" alt="mode" class="search-icons pointer">
+                        <img src="./images/Vertical Navbar/Notifications.svg" alt="Notifications" class="search-icons pointer">
+                        <img src="./images/user-icon.png" alt="" class="user-icon-img pointer">
+                        <div class="profile-user-name-role pointer">
+                            <p class="profile-user-name"> John Abraham</p>
+                            <p class="profile-user-role"> Admin</p>
+                        </div>
+                        <img src="./images/drop-down-25.svg" alt="" class="drop-down-icon pointer">
+                    </div>
+                </div>
+                <div class="pop-up-container">
+                    <h3 class="main-add-employee-text">Add Employee</h3>
+                    <div class="emp-success-popup">
+                        <h3 class="popup-text">Fill all the mandatory fields along with profile picture</h3>
+                    </div>
+                </div>
+                <div class="add-employee-container">
+                    <div class="img-holder">
+                        <img src="./images/user-icon.png" alt="user icon image" class="large-user-icon">
+                        <div>
+                            <input id="profile-pic" type="file" title="Enter Profile Picture" hidden onchange="changeProfilepic()">
+                            <label for="profile-pic" class="input-img-edit pointer">Upload Profile Picture</label>
+                        </div>
+                    </div>
+                    <div class="information-holder">
+                        <h4 class="per-emp-info-text">Personal Information</h4>
+                        <table class="personal-info-table">
+                            <tr>
+                                <td>
+                                    <div class="emp-no-container">
+                                        <label for="employee number">Emp No</label>
+                                        <input type="text" minlength="8" maxlength="8" class="mandatory emp-no" placeholder="Text" onfocusout="validateId()" onfocus="errorHidden('emp-no-container')">
+                                        <p class="error-msg"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">This field is required.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="details-row-flex">
+                                    <div class="first-name-container">
+                                        <label for="first name">First Name</label>
+                                        <input type="text" class="mandatory first-name" placeholder="Text" onkeyup="validateName('first-name-container')" onfocus="errorHidden('first-name-container')">
+                                        <p class="error-msg"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">This field is required.</p>
+                                    </div>
+                                    <div class="last-name-container">
+                                        <label for="last name">Last Name</label>
+                                        <input type="text" class="mandatory last-name" placeholder="Text" onkeyup="validateName('last-name-container')" onfocus="errorHidden('last-name-container')">
+                                        <p class="error-msg"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">This field is required.</p>
+                                    </div>
+                                    <div class="birth-date-container">
+                                        <label for="birth date">Date of Birth</label>
+                                        <input type="date" class="input-width dob" placeholder="Select" min="1900-01-01" max="2020-12-31" onfocusout="validateDob()">
+                                        <p class="just_show"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">Enter valid Date!</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="details-row-flex">
+                                    <div class="emp-mail-container">
+                                        <label for="employee mail">Email id</label>
+                                        <input type="email" class="mandatory mail-id" placeholder="Joe.j@technovert.com" onfocusout="validateMail()"onfocus="errorHidden('emp-mail-container')">
+                                        <p class="error-msg"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">This field is required.</p>
+                                    </div>
+                                    <div class="mobile-number-container">
+                                        <label for="mobile number">Mobile Number</label>
+                                        <input type="number" maxlength="10" class="input-width mobile-no" placeholder="0000000000" onfocusout="validateMobileNumber()" onfocus="errorHidden('mobile-number-container')">
+                                        <p class="just_show">Enter valid Mobile Number!</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <h4 class="per-emp-info-text">Employment Information</h4>
+                        
+                        <table class="employment-info-table">
+                            <tr>
+                                <td class="details-row-flex">
+                                    <div class="join-date-container">
+                                        <label for="join date">Joining Date</label>
+                                        <input type="date" class="mandatory join-date" min="1900-01-01" max="2024-02-23" onfocusout="validateJoinDate()" onfocus="errorHidden('join-date-container')">
+                                        <p class="error-msg"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">This field is required.</p>
+                                    </div>
+                                    <div class="location-container">
+                                        <label for="location">Location</label>
+                                        <select name="location" class="emp-info-input grey-background loc">
+                                            <option value="Hyderabad" class="option-style">Hyderabad</option>
+                                            <option value="Chennai" class="option-style">Chennai</option>
+                                        </select>
+                                        <p class="just_show">&nbsp;</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="details-row-flex">
+                                    <div class="job-title-container">
+                                        <label for="job title">Job Title</label>
+                                        <select name="jobtitle" class="emp-info-input grey-background job-title">
+                                            <option value="UX Designer" class="option-style">UX Designer</option>
+                                            <option value="QA" class="option-style">QA</option>
+                                        </select>
+                                        <p class="just_show">&nbsp;</p>
+                                    </div>
+                                    <div class="department-container">
+                                        <label for="department">Department</label>
+                                        <select name="department" class="emp-info-input grey-background dept">
+                                            <option value="UI/UX" class="option-style">UI/UX</option>
+                                            <option value="Analyst" class="Analyst">Analyst</option>
+                                        </select>
+                                        <p class="just_show">&nbsp;</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="details-row-flex">
+                                    <div class="manager-container">
+                                        <label for="manager assignment">Assign Manager</label>
+                                        <select name="managerAssign" class="emp-info-input grey-background" disabled>
+                                            <option value="" class="option-style" hidden>Search</option>
+                                        </select>
+                                        <p class="just_show">&nbsp;</p>
+                                    </div>
+                                    <div class="project-container">
+                                        <label for="project assignment">Assign Project</label>
+                                        <select name="projectAssign" class="emp-info-input grey-background" disabled>
+                                            <option value="" class="option-style" hidden>Search</option>
+                                        </select>
+                                        <p class="just_show">&nbsp;</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="cancel-add-emp-btns">
+                            <input type="reset" value="Cancel" class="add-emp-cancel-btn pointer" onclick="window.location.href='Employee.html'">
+                            <input type="submit" value="Add Employee" class="add-emp-add-emp-btn pointer" onclick="empValidation()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,502 @@
+[
+    {
+        "empname": "Patric Kastel",
+        "empmail": "pkastel0@va.gov",
+        "location": "Cambarus",
+        "department": "Marketing",
+        "role": "Uorxbe",
+        "emp_no": "TZ500668",
+        "status_": false,
+        "join_date": "6/27/2023"
+    },
+    {
+        "empname": "Patrice Sully",
+        "empmail": "psully1@phpbb.com",
+        "location": "Elbrus",
+        "department": "Accounting",
+        "role": "Zjmren",
+        "emp_no": "TZ770094",
+        "status_": true,
+        "join_date": "6/5/2023"
+    },
+    {
+        "empname": "Delano Sunderland",
+        "empmail": "dsunderland2@sitemeter.com",
+        "location": "Phra Phutthabat",
+        "department": "Training",
+        "role": "Gerkzo",
+        "emp_no": "TZ173526",
+        "status_": false,
+        "join_date": "9/13/2023"
+    },
+    {
+        "empname": "Lettie Dary",
+        "empmail": "ldary3@csmonitor.com",
+        "location": "Nueva Gerona",
+        "department": "Research",
+        "role": "Uhdwxjz",
+        "emp_no": "TZ708492",
+        "status_": false,
+        "join_date": "10/9/2023"
+    },
+    {
+        "empname": "Lilli Segrave",
+        "empmail": "lsegrave4@hp.com",
+        "location": "San Martín",
+        "department": "Sales",
+        "role": "Npp",
+        "emp_no": "TZ441048",
+        "status_": true,
+        "join_date": "11/28/2023"
+    },
+    {
+        "empname": "Cindie Dyett",
+        "empmail": "cdyett5@prlog.org",
+        "location": "Campo Verde",
+        "department": "Services",
+        "role": "Fzictuu",
+        "emp_no": "TZ368284",
+        "status_": false,
+        "join_date": "4/24/2023"
+    },
+    {
+        "empname": "Reinold Mottinelli",
+        "empmail": "rmottinelli6@infoseek.co.jp",
+        "location": "Turija",
+        "department": "Services",
+        "role": "Vvnca",
+        "emp_no": "TZ377543",
+        "status_": false,
+        "join_date": "3/20/2023"
+    },
+    {
+        "empname": "Fairfax Seys",
+        "empmail": "fseys7@forbes.com",
+        "location": "Chamical",
+        "department": "Accounting",
+        "role": "Thhykqt",
+        "emp_no": "TZ354157",
+        "status_": false,
+        "join_date": "11/30/2023"
+    },
+    {
+        "empname": "Cristal Lowmass",
+        "empmail": "clowmass8@engadget.com",
+        "location": "Rafaï",
+        "department": "Support",
+        "role": "Uelyxa",
+        "emp_no": "TZ656213",
+        "status_": false,
+        "join_date": "4/11/2023"
+    },
+    {
+        "empname": "Cami Desmond",
+        "empmail": "cdesmond9@netlog.com",
+        "location": "Nora",
+        "department": "Management",
+        "role": "Jerko",
+        "emp_no": "TZ878816",
+        "status_": false,
+        "join_date": "10/3/2023"
+    },
+    {
+        "empname": "Whitaker Spick",
+        "empmail": "wspicka@webmd.com",
+        "location": "London",
+        "department": "Resources",
+        "role": "Hbrcz",
+        "emp_no": "TZ420906",
+        "status_": false,
+        "join_date": "11/28/2023"
+    },
+    {
+        "empname": "Park Korda",
+        "empmail": "pkordab@exblog.jp",
+        "location": "Tanjungjaya",
+        "department": "Legal",
+        "role": "Leztt",
+        "emp_no": "TZ776999",
+        "status_": true,
+        "join_date": "9/17/2023"
+    },
+    {
+        "empname": "Ursula Anstis",
+        "empmail": "uanstisc@dyndns.org",
+        "location": "Jilib",
+        "department": "Research",
+        "role": "Bioxjr",
+        "emp_no": "TZ521679",
+        "status_": true,
+        "join_date": "6/6/2023"
+    },
+    {
+        "empname": "Camile Farnell",
+        "empmail": "cfarnelld@theatlantic.com",
+        "location": "Yangcheng",
+        "department": "Accounting",
+        "role": "Pdnqlw",
+        "emp_no": "TZ753713",
+        "status_": false,
+        "join_date": "1/4/2024"
+    },
+    {
+        "empname": "Reuben Monkeman",
+        "empmail": "rmonkemane@reuters.com",
+        "location": "Mizhuang",
+        "department": "Resources",
+        "role": "Wbfubp",
+        "emp_no": "TZ148109",
+        "status_": false,
+        "join_date": "6/18/2023"
+    },
+    {
+        "empname": "Robbyn Alfonso",
+        "empmail": "ralfonsof@wikispaces.com",
+        "location": "Pingsha",
+        "department": "Marketing",
+        "role": "Qgksks",
+        "emp_no": "TZ127149",
+        "status_": false,
+        "join_date": "3/20/2023"
+    },
+    {
+        "empname": "Wright Nusche",
+        "empmail": "wnuscheg@examiner.com",
+        "location": "Congonhas",
+        "department": "Sales",
+        "role": "Fipwg",
+        "emp_no": "TZ627092",
+        "status_": true,
+        "join_date": "1/4/2024"
+    },
+    {
+        "empname": "Charlie Trethewey",
+        "empmail": "ctretheweyh@ebay.com",
+        "location": "Acolla",
+        "department": "Sales",
+        "role": "Riyxak",
+        "emp_no": "TZ084493",
+        "status_": true,
+        "join_date": "6/9/2023"
+    },
+    {
+        "empname": "Reynard Von Welldun",
+        "empmail": "rvoni@harvard.edu",
+        "location": "Gonba",
+        "department": "Business",
+        "role": "Phlj",
+        "emp_no": "TZ771630",
+        "status_": false,
+        "join_date": "2/21/2023"
+    },
+    {
+        "empname": "Giulio Samsworth",
+        "empmail": "gsamsworthj@sourceforge.net",
+        "location": "Camacha",
+        "department": "Engineering",
+        "role": "Htykv",
+        "emp_no": "TZ689475",
+        "status_": true,
+        "join_date": "12/18/2023"
+    },
+    {
+        "empname": "Dori Moorfield",
+        "empmail": "dmoorfieldk@github.io",
+        "location": "Xuanzhou",
+        "department": "Legal",
+        "role": "Yyzqy",
+        "emp_no": "TZ767835",
+        "status_": true,
+        "join_date": "4/17/2023"
+    },
+    {
+        "empname": "Lolita Perrott",
+        "empmail": "lperrottl@cargocollective.com",
+        "location": "Jimaguayú",
+        "department": "Research",
+        "role": "Epnrfd",
+        "emp_no": "TZ762111",
+        "status_": true,
+        "join_date": "7/25/2023"
+    },
+    {
+        "empname": "Mabelle Rizzone",
+        "empmail": "mrizzonem@yahoo.co.jp",
+        "location": "Amiens",
+        "department": "Services",
+        "role": "Ugwccah",
+        "emp_no": "TZ459333",
+        "status_": false,
+        "join_date": "3/24/2023"
+    },
+    {
+        "empname": "Gradey Benton",
+        "empmail": "gbentonn@desdev.cn",
+        "location": "Kolonia Town",
+        "department": "Accounting",
+        "role": "Zavnbv",
+        "emp_no": "TZ702218",
+        "status_": true,
+        "join_date": "1/14/2024"
+    },
+    {
+        "empname": "Con Kayzer",
+        "empmail": "ckayzero@businessinsider.com",
+        "location": "Chenôve",
+        "department": "Legal",
+        "role": "Xwxk",
+        "emp_no": "TZ048346",
+        "status_": true,
+        "join_date": "9/13/2023"
+    },
+    {
+        "empname": "Manfred Maffia",
+        "empmail": "mmaffiap@tripod.com",
+        "location": "Mito-shi",
+        "department": "Legal",
+        "role": "Xkorf",
+        "emp_no": "TZ878122",
+        "status_": true,
+        "join_date": "11/15/2023"
+    },
+    {
+        "empname": "Ludovika Chaulk",
+        "empmail": "lchaulkq@japanpost.jp",
+        "location": "Bayan Hure",
+        "department": "Training",
+        "role": "Xgzoee",
+        "emp_no": "TZ005003",
+        "status_": true,
+        "join_date": "10/25/2023"
+    },
+    {
+        "empname": "Wilmette Brende",
+        "empmail": "wbrender@cam.ac.uk",
+        "location": "Ágios Týchon",
+        "department": "Marketing",
+        "role": "Qppnh",
+        "emp_no": "TZ451988",
+        "status_": false,
+        "join_date": "10/30/2023"
+    },
+    {
+        "empname": "Lilly De-Ville",
+        "empmail": "ldevilles@examiner.com",
+        "location": "Tantu",
+        "department": "Services",
+        "role": "Ioolx",
+        "emp_no": "TZ948638",
+        "status_": true,
+        "join_date": "5/27/2023"
+    },
+    {
+        "empname": "Almeda Cracie",
+        "empmail": "acraciet@mozilla.org",
+        "location": "Gjirokastër",
+        "department": "Sales",
+        "role": "Yactn",
+        "emp_no": "TZ456837",
+        "status_": false,
+        "join_date": "5/19/2023"
+    },
+    {
+        "empname": "Bastien Pointin",
+        "empmail": "bpointinu@furl.net",
+        "location": "Somita",
+        "department": "Business",
+        "role": "Kvawf",
+        "emp_no": "TZ435439",
+        "status_": true,
+        "join_date": "4/20/2023"
+    },
+    {
+        "empname": "Zena Mynett",
+        "empmail": "zmynettv@smh.com.au",
+        "location": "Lindavista",
+        "department": "Business",
+        "role": "Qiyin",
+        "emp_no": "TZ796463",
+        "status_": true,
+        "join_date": "5/4/2023"
+    },
+    {
+        "empname": "Mikael Haffner",
+        "empmail": "mhaffnerw@pagesperso-orange.fr",
+        "location": "Kalmar",
+        "department": "Engineering",
+        "role": "Siwkec",
+        "emp_no": "TZ362822",
+        "status_": false,
+        "join_date": "9/17/2023"
+    },
+    {
+        "empname": "Demetris Benech",
+        "empmail": "dbenechx@canalblog.com",
+        "location": "Caucaia",
+        "department": "Management",
+        "role": "Wucrv",
+        "emp_no": "TZ645646",
+        "status_": true,
+        "join_date": "8/23/2023"
+    },
+    {
+        "empname": "Stafani Harroll",
+        "empmail": "sharrolly@furl.net",
+        "location": "Laiwu",
+        "department": "Legal",
+        "role": "Oyrhv",
+        "emp_no": "TZ951878",
+        "status_": false,
+        "join_date": "8/7/2023"
+    },
+    {
+        "empname": "Keenan Kalewe",
+        "empmail": "kkalewez@miibeian.gov.cn",
+        "location": "Cabannun",
+        "department": "Services",
+        "role": "Ztyfe",
+        "emp_no": "TZ307485",
+        "status_": false,
+        "join_date": "5/5/2023"
+    },
+    {
+        "empname": "Cyndia Gribbon",
+        "empmail": "cgribbon10@sun.com",
+        "location": "Chiguata",
+        "department": "Services",
+        "role": "Yjcze",
+        "emp_no": "TZ048342",
+        "status_": false,
+        "join_date": "9/6/2023"
+    },
+    {
+        "empname": "Sharleen Bowness",
+        "empmail": "sbowness11@reference.com",
+        "location": "Humaitá",
+        "department": "Training",
+        "role": "Ivgbl",
+        "emp_no": "TZ923301",
+        "status_": true,
+        "join_date": "8/30/2023"
+    },
+    {
+        "empname": "Mandel Coatham",
+        "empmail": "mcoatham12@mozilla.org",
+        "location": "Si Ma Cai",
+        "department": "Sales",
+        "role": "Uoyez",
+        "emp_no": "TZ207089",
+        "status_": true,
+        "join_date": "12/13/2023"
+    },
+    {
+        "empname": "Onofredo Ivankovic",
+        "empmail": "oivankovic13@tumblr.com",
+        "location": "Nirgua",
+        "department": "Support",
+        "role": "Pfubvx",
+        "emp_no": "TZ024924",
+        "status_": true,
+        "join_date": "2/17/2023"
+    },
+    {
+        "empname": "Crista Carles",
+        "empmail": "ccarles14@springer.com",
+        "location": "La Libertad",
+        "department": "Resources",
+        "role": "Bmla",
+        "emp_no": "TZ133093",
+        "status_": false,
+        "join_date": "3/13/2023"
+    },
+    {
+        "empname": "Allard Lehmann",
+        "empmail": "alehmann15@cafepress.com",
+        "location": "Kameda",
+        "department": "Services",
+        "role": "Mssms",
+        "emp_no": "TZ545498",
+        "status_": true,
+        "join_date": "9/6/2023"
+    },
+    {
+        "empname": "Bear Kliche",
+        "empmail": "bkliche16@photobucket.com",
+        "location": "Cabitan",
+        "department": "Business",
+        "role": "Tldvw",
+        "emp_no": "TZ818161",
+        "status_": false,
+        "join_date": "5/7/2023"
+    },
+    {
+        "empname": "Kayne Duffet",
+        "empmail": "kduffet17@slashdot.org",
+        "location": "Amieirinha",
+        "department": "Legal",
+        "role": "Pwqhc",
+        "emp_no": "TZ135498",
+        "status_": false,
+        "join_date": "6/18/2023"
+    },
+    {
+        "empname": "Edouard Hurnell",
+        "empmail": "ehurnell18@dailymail.co.uk",
+        "location": "Pelópion",
+        "department": "Research",
+        "role": "Eloxy",
+        "emp_no": "TZ152700",
+        "status_": false,
+        "join_date": "3/18/2023"
+    },
+    {
+        "empname": "Zachery Macken",
+        "empmail": "zmacken19@mozilla.com",
+        "location": "Komprachcice",
+        "department": "Legal",
+        "role": "Sxovn",
+        "emp_no": "TZ089189",
+        "status_": true,
+        "join_date": "5/15/2023"
+    },
+    {
+        "empname": "Matti Caulket",
+        "empmail": "mcaulket1a@icio.us",
+        "location": "Cimişlia",
+        "department": "Resources",
+        "role": "Rzzp",
+        "emp_no": "TZ617548",
+        "status_": false,
+        "join_date": "1/13/2024"
+    },
+    {
+        "empname": "Danie Kellogg",
+        "empmail": "dkellogg1b@meetup.com",
+        "location": "Santa Inês",
+        "department": "Resources",
+        "role": "Wkbhm",
+        "emp_no": "TZ696640",
+        "status_": false,
+        "join_date": "8/17/2023"
+    },
+    {
+        "empname": "Ashlee Pierton",
+        "empmail": "apierton1c@indiatimes.com",
+        "location": "Anzhero",
+        "department": "Accounting",
+        "role": "Fcqpw",
+        "emp_no": "TZ351988",
+        "status_": true,
+        "join_date": "4/14/2023"
+    },
+    {
+        "empname": "Gerri Canby",
+        "empmail": "gcanby1d@jalbum.net",
+        "location": "Aksakovo",
+        "department": "Engineering",
+        "role": "Lwxpcn",
+        "emp_no": "TZ119464",
+        "status_": false,
+        "join_date": "9/9/2023"
+    }
+]
