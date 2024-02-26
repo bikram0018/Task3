@@ -183,7 +183,7 @@ function buttonCharFind(char){
     var table_rows=document.getElementsByClassName('hover-color');
     var c=0;
     for(i=0;i<empNames.length;i++){
-        if(empNames[i].textContent[0]!=char){
+        if(empNames[i].textContent[0].toLocaleLowerCase()!=char.toLocaleLowerCase()){
             table_rows[i].hidden=true;
             c+=1;
         }
@@ -467,76 +467,72 @@ function sortEmpData(ind,parameter,compare){
     var len=tableRows.length;
     var doAgain=true;
     var first,second;
-    if(flag==compare){
-        switch(ind){
-            case 1:
-                while(doAgain){
-                    doAgain=false;
-                    for(let i=1;i<len-1;i++){
-                        first=tableRows[i].getElementsByClassName(parameter)[0].textContent.toLowerCase();
-                        second=tableRows[i+1].getElementsByClassName(parameter)[0].textContent.toLowerCase();
-                        if(flag==compare){
-                            if(first<second){
-                                doAgain=true;
-                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                            }
+    switch(ind){
+        case 1:
+            while(doAgain){
+                doAgain=false;
+                for(let i=1;i<len-1;i++){
+                    first=tableRows[i].getElementsByClassName(parameter)[0].textContent.toLowerCase();
+                    second=tableRows[i+1].getElementsByClassName(parameter)[0].textContent.toLowerCase();
+                    if(flag==compare){
+                        if(first<second){
+                            doAgain=true;
+                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
                         }
-                        else{
-                            if(first>second){
-                                doAgain=true;
-                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                            }
+                    }
+                    else{
+                        if(first>second){
+                            doAgain=true;
+                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
                         }
                     }
                 }
-            break;
-            case 2:
-                while(doAgain){
-                    doAgain=false;
-                    for(let i=1;i<len-1;i++){
-                        first=tableRows[i].getElementsByTagName('td')[parameter].textContent.toLowerCase();
-                        second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent.toLowerCase();
-                        if(flag==compare){
-                            if(first<second){
-                                doAgain=true;
-                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                            }
+            }
+        break;
+        case 2:
+            while(doAgain){
+                doAgain=false;
+                for(let i=1;i<len-1;i++){
+                    first=tableRows[i].getElementsByTagName('td')[parameter].textContent.toLowerCase();
+                    second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent.toLowerCase();
+                    if(flag==compare){
+                        if(first<second){
+                            doAgain=true;
+                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
                         }
-                        else{
-                            if(first>second){
-                                doAgain=true;
-                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                            }
+                    }
+                    else{
+                        if(first>second){
+                            doAgain=true;
+                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
                         }
                     }
                 }
-            break;
-            case 3:
-                while(doAgain){
-                    doAgain=false;
-                    for(let i=1;i<len-1;i++){
-                        first=tableRows[i].getElementsByTagName('td')[parameter].textContent;
-                        second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent;
-                        first=new Date(first);
-                        second=new Date(second);
-                        if(flag==compare){
-                            if(first<second){
-                                doAgain=true;
-                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                            }
+            }
+        break;
+        case 3:
+            while(doAgain){
+                doAgain=false;
+                for(let i=1;i<len-1;i++){
+                    first=tableRows[i].getElementsByTagName('td')[parameter].textContent;
+                    second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent;
+                    first=new Date(first);
+                    second=new Date(second);
+                    if(flag==compare){
+                        if(first<second){
+                            doAgain=true;
+                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
                         }
-                        else{
-                            if(first>second){
-                                doAgain=true;
-                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                            }
+                    }
+                    else{
+                        if(first>second){
+                            doAgain=true;
+                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
                         }
                     }
                 }
-            break;
-        }
-        flag=-1;
-        return;
+            }
+        break;
     }
     flag=flag==compare?-1:compare;
 }
