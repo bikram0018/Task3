@@ -15,13 +15,9 @@
             document.addEventListener('click', function handleClickdropdown(event) {
                 const box = document.getElementsByClassName('role-emp-details')[0];
                 const sbox= document.getElementsByClassName('emp-search')[0];
-                if(box.contains(event.target) || sbox.contains(event.target)){
-                    // box.style.display='none';
-                }
-                else{
+                if(!(box.contains(event.target) || sbox.contains(event.target))){
                     box.style.display='none';
-                }
-                
+                } 
             });
         </script>
     </head>
