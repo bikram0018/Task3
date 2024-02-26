@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const row = createTableRow(employee);
             tableBody.appendChild(row);
         });
-        updateFilters(data);
     }
 
     function createTableRow(employee) {
