@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         row.classList.add('hover-color');
         const bgColor = 'rgb(231,244,232)';
         const textColor = 'rgb(80,153,129)';
-        const image = employee.proflePic ? employee.proflePic : "./images/user-icon.png";
+        const image = employee.profilePic ? employee.profilePic : "./images/user-icon.png";
         row.innerHTML = `
             <td><input type="checkbox" class="check_box_prop" onclick="allChecked()"></td>
             <td>
@@ -284,6 +284,7 @@ function revealResetApplyButtons(){
             empRows[i].hidden=false;
         }
     }
+    document.getElementsByClassName('empty-table-popup')[0].style.display='none';
 }
 
 

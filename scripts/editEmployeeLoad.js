@@ -30,7 +30,7 @@ function editEmpDetails(){
                 data[i].dept=document.getElementsByClassName('dept')[0].value;
                 data[i].dob=document.getElementsByClassName('dob')[0].value;
                 data[i].mobileNumber=document.getElementsByClassName('mobile-no')[0].value;
-                data[i].profilePic=data[i].profilePic || changeProfilepic();
+                data[i].profilePic=changeProfilepic() || data[i].profilePic;
                 data=localStorage.setItem('newEmpData',JSON.stringify(data));
                 localStorage.setItem('showUpdateMessage',JSON.stringify(true));
                 window.location.href='Employee.html';
