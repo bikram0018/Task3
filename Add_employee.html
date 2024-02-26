@@ -4,7 +4,6 @@
             Add Employee
         </title>
         <link rel="stylesheet" href="task3css.css">
-        <link rel="stylesheet" href="additional.css">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script type="text/javascript" src="./scripts/employeeValidation.js"></script>
         <script type="text/javascript" src="./scripts/paneShrinkExpand.js"></script>
@@ -120,7 +119,7 @@
                                     </div>
                                     <div class="birth-date-container">
                                         <label for="birth date">Date of Birth</label>
-                                        <input type="date" class="input-width dob" placeholder="Select" min="1900-01-01" max="2020-12-31" onfocusout="validateDob()">
+                                        <input type="date" class="input-width dob" placeholder="Select" max="2005-12-31" onfocusout="validateDob()">
                                         <p class="just_show"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">Enter valid Date!</p>
                                     </div>
                                 </td>
@@ -147,14 +146,12 @@
                                 <td class="details-row-flex">
                                     <div class="join-date-container">
                                         <label for="join date">Joining Date</label>
-                                        <input type="date" class="mandatory join-date" min="1900-01-01" max="2024-02-23" onfocusout="validateJoinDate()" onfocus="errorHidden('join-date-container')">
+                                        <input type="date" class="mandatory join-date" min="1900-01-01" onfocusout="validateJoinDate()" onfocus="errorHidden('join-date-container')">
                                         <p class="error-msg"><img src="./images/red-alert-icon.svg" alt="alert icon" class="alert-icon">This field is required.</p>
                                     </div>
                                     <div class="location-container">
                                         <label for="location">Location</label>
                                         <select name="location" class="emp-info-input grey-background loc">
-                                            <option value="Hyderabad" class="option-style">Hyderabad</option>
-                                            <option value="Chennai" class="option-style">Chennai</option>
                                         </select>
                                         <p class="just_show">&nbsp;</p>
                                     </div>
@@ -165,16 +162,12 @@
                                     <div class="job-title-container">
                                         <label for="job title">Job Title</label>
                                         <select name="jobtitle" class="emp-info-input grey-background job-title">
-                                            <option value="UX Designer" class="option-style">UX Designer</option>
-                                            <option value="QA" class="option-style">QA</option>
                                         </select>
                                         <p class="just_show">&nbsp;</p>
                                     </div>
                                     <div class="department-container">
                                         <label for="department">Department</label>
                                         <select name="department" class="emp-info-input grey-background dept">
-                                            <option value="UI/UX" class="option-style">UI/UX</option>
-                                            <option value="Analyst" class="Analyst">Analyst</option>
                                         </select>
                                         <p class="just_show">&nbsp;</p>
                                     </div>

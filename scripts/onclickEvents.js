@@ -7,35 +7,31 @@ document.addEventListener("DOMContentLoaded", function () {
     //         updateFilters(data);
     //         loadData();
     //     });
-    data=localStorage.getItem('empData');
+    data=localStorage.getItem('newEmpData');
     data=JSON.parse(data);
     populateTable(data);
     updateFilters(data);
-    loadData();
 
     var showMsg=JSON.parse(localStorage.getItem('showSuccessMessage'));
     var showUpd=JSON.parse(localStorage.getItem('showUpdateMessage'));
     if(showMsg){
-        const box = document.getElementsByClassName('emp-success-popup')[0];
-        box.getElementsByClassName('popup-text')[0].innerHTML='Employee Added Successfully';
-        box.style.display='block';
-        document.getElementsByClassName('active-icon')[0].style.display='none';
-        setTimeout(() => {
-            box.style.display = 'none';
-            document.getElementsByClassName('active-icon')[0].style.display='block';
-        }, 2000);
+        showMessage('Employee Added Successfully');
         localStorage.setItem('showSuccessMessage',JSON.stringify(false))
     }
     if(showUpd){
+        showMessage('Employee Updated Successfully');
+        localStorage.setItem('showUpdateMessage',JSON.stringify(false))
+    }
+
+    function showMessage(msg){
         const box = document.getElementsByClassName('emp-success-popup')[0];
-        box.getElementsByClassName('popup-text')[0].innerHTML='Employee Updated Successfully';
+        box.getElementsByClassName('popup-text')[0].innerHTML=msg;
         box.style.display='block';
         document.getElementsByClassName('active-icon')[0].style.display='none';
         setTimeout(() => {
             box.style.display = 'none';
             document.getElementsByClassName('active-icon')[0].style.display='block';
         }, 2000);
-        localStorage.setItem('showUpdateMessage',JSON.stringify(false))
     }
 
     function populateTable(data) {
@@ -50,53 +46,45 @@ document.addEventListener("DOMContentLoaded", function () {
     function createTableRow(employee) {
         const row = document.createElement('tr');
         row.classList.add('hover-color');
-        const statusText = employee.status_ ? 'Active' : 'Inactive';
-        const bgColor = statusText === 'Inactive' ? 'rgb(240, 214, 214)' : 'rgb(231,244,232)';
-        const textColor = statusText === 'Inactive' ? 'rgb(194, 40, 40)' : 'rgb(80,153,129)';
+        const bgColor = 'rgb(231,244,232)';
+        const textColor = 'rgb(80,153,129)';
+        const image = employee.proflePic ? employee.proflePic : "./images/user-icon.png";
         row.innerHTML = `
             <td><input type="checkbox" class="check_box_prop" onclick="allChecked()"></td>
             <td>
                 <div class="emp-profile">
-                    <img src="./images/user-icon.png" alt="user-icon" class="emp-icon-img">
+                    <img src=${image} alt="user-icon" class="emp-icon-img">
                     <div class="emp-name-mail">
-                        <p class="emp-name">${employee.empname}</p>
-                        <p class="emp-mail text-grey-clr">${employee.empmail}</p>
+                        <p class="emp-name">${employee.fname+' '+employee.lname}</p>
+                        <p class="emp-mail text-grey-clr">${employee.email}</p>
                     </div>
                 </div> 
             </td>
             <td>${employee.location}</td>
-            <td>${employee.department}</td>
+            <td>${employee.dept}</td>
             <td>${employee.role}</td>
-            <td>${employee.emp_no}</td>
-            <td><p class="emp-status" style="background-color: ${bgColor}; color: ${textColor}">${statusText}</p></td>
-            <td>${employee.join_date}</td>
+            <td>${employee.empno}</td>
+            <td><p class="emp-status" style="background-color: ${bgColor}; color: ${textColor}">Active</p></td>
+            <td>${employee.jdate}</td>
             <td class="dots pointer" onclick="editOptions()">···</td>
         `;
         return row;
     }
 
     function updateFilters(data) {
-        let val = "";
-        const empTable = document.getElementsByClassName("emp-details-table")[0];
-        const tableRows = empTable.rows;
-        const len = tableRows.length;
+        var loc=['Banglore','Chennai','Delhi','Hyderabad','Kerala','Tamilnadu'];
+        loc.sort();
         const locationFilter = document.getElementsByClassName('select-options')[1];
-        for (let i = 1; i < len; i++) {
-            const value = tableRows[i].getElementsByTagName('td')[2].textContent;
-            if (!(val.includes('+' + value + '+'))) {
-                val = val + '+' + value + '+';
-                const opt = createOption(value);
-                locationFilter.appendChild(opt);
-            }
+        for (let i = 0; i < loc.length; i++) {
+            const opt = createOption(loc[i]);
+            locationFilter.appendChild(opt);
         }
+        var dept=['HR','Finance','Administration','Marketing','Sales','IT','Accounting','Research','Production','Customer service','Purchasing','Distribution'];
+        dept.sort();
         const departmentFilter = document.getElementsByClassName('select-options')[2];
-        for (let i = 1; i < len; i++) {
-            const value = tableRows[i].getElementsByTagName('td')[3].textContent;
-            if (!(val.includes('+' + value + '+'))) {
-                val = val + '+' + value + '+';
-                const opt = createOption(value);
-                departmentFilter.appendChild(opt);
-            }
+        for (let i = 0; i < dept.length; i++) {
+            const opt = createOption(dept[i]);
+            departmentFilter.appendChild(opt);
         }
     }
 
@@ -114,44 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
         box.appendChild(chbox);
         box.onclick=revealResetApplyButtons;
         return box;
-    }
-
-    function loadData(){
-        var employees=localStorage.getItem('newEmpData');
-        var proflePic=localStorage.getItem('profilePic');
-        if(employees){
-            employees=JSON.parse(employees);
-            proflePic=JSON.parse(proflePic);
-            var count=0;
-            employees.forEach(employee => {
-                const tableBody = document.getElementsByClassName('emp-details-table')[0];
-                const row = document.createElement('tr');
-                row.classList.add('hover-color');
-                const bgColor = 'rgb(231,244,232)';
-                const textColor = 'rgb(80,153,129)';
-                row.innerHTML = `
-                    <td><input type="checkbox" class="check_box_prop" onclick="allChecked()"></td>
-                    <td>
-                        <div class="emp-profile">
-                            <img src=${proflePic[count]} alt="user-icon" class="emp-icon-img">
-                            <div class="emp-name-mail">
-                                <p class="emp-name">${employee.fname+' '+employee.lname}</p>
-                                <p class="emp-mail text-grey-clr">${employee.email}</p>
-                            </div>
-                        </div>
-                    </td>
-                    <td>${employee.location}</td>
-                    <td>${employee.dept}</td>
-                    <td>${employee.role}</td>
-                    <td>${employee.empno}</td>
-                    <td><p class="emp-status" style="background-color: ${bgColor}; color: ${textColor}">Active</p></td>
-                    <td>${employee.jdate}</td>
-                    <td class="dots pointer" onclick="editOptions()">···</td>
-                `;
-                tableBody.appendChild(row);
-                count+=1;
-            });
-        }
     }
 });
 
@@ -328,6 +278,11 @@ function revealResetApplyButtons(){
         btn1.disabled=true;
         btn2.style.opacity='0.5';
         btn2.disabled=true;
+        var emp=document.getElementsByClassName("emp-details-table")[0];
+        empRows=emp.rows;
+        for(i=0;i<empRows.length;i++){
+            empRows[i].hidden=false;
+        }
     }
 }
 
@@ -430,6 +385,16 @@ function filterSearch(){
     // document.getElementsByClassName('empty-table-popup')[0].style.display= invisible==empRows.length-1 ? 'block' : 'none';
 }
 
+function deleteEmpData(value){
+    var data=JSON.parse(localStorage.getItem('newEmpData'));
+    for(let k=0;k<data.length;k++){
+        if(data[k].empno==value){
+            data.splice(k,1);
+            localStorage.setItem('newEmpData',JSON.stringify(data));
+            break;
+        }
+    }
+}
 
 function deleteRows(){
     var empTable=document.getElementsByClassName("emp-details-table")[0];
@@ -440,33 +405,7 @@ function deleteRows(){
         var dis=empTable.getElementsByTagName('tr')[count].hidden;
         if(checkBox[count].checked && !dis){
             var val=empTable.getElementsByTagName('tr')[count].getElementsByTagName('td')[5].innerHTML;
-            var data=localStorage.getItem('empData');
-            var done=true;
-            data=JSON.parse(data);
-            for(j=0;j<data.length;j++){
-                if(val==data[j].emp_no){
-                    data.splice(j,1);
-                    localStorage.setItem('empData',JSON.stringify(data));
-                    done=false;
-                    break;
-                }
-            }
-            if(done){
-                var data=localStorage.getItem('newEmpData');
-                var pics=localStorage.getItem('profilePic');
-                data=JSON.parse(data);
-                pics=JSON.parse(pics);
-                for(k=0;k<data.length;k++){
-                    if(val==data[k].empno){
-                        data.splice(k,1);
-                        pics.splice(k,1);
-                        localStorage.setItem('newEmpData',JSON.stringify(data));    
-                        localStorage.setItem('profilePic',JSON.stringify(pics));
-                        done=false;
-                        break;
-                    }
-                }
-            }
+            deleteEmpData(val);
             empTable.deleteRow(count);
         }
         else{
@@ -491,45 +430,19 @@ function optionalDelete(){
     row=JSON.parse(row);
     var empTable=document.getElementsByClassName("emp-details-table")[0];
     var len=empTable.rows.length;
-    var count=1;
-    var done=true;
+    var done=false;
     for(i=1;i<len;i++){
         var val=empTable.getElementsByTagName('tr')[i].getElementsByTagName('td')[5].innerHTML;
         if(val==row.empId){
-            var data=localStorage.getItem('empData');
-            data=JSON.parse(data);
-            for(j=0;j<data.length;j++){
-                if(val==data[j].emp_no){
-                    data.splice(j,1);
-                    localStorage.setItem('empData',JSON.stringify(data));
-                    done=false;
-                    break;
-                }
-            }
-            if(done){
-                var data=localStorage.getItem('newEmpData');
-                var pics=localStorage.getItem('profilePic');
-                data=JSON.parse(data);
-                pics=JSON.parse(pics);
-                for(k=0;k<data.length;k++){
-                    if(val==data[k].empno){
-                        data.splice(k,1);
-                        pics.splice(k,1);
-                        localStorage.setItem('newEmpData',JSON.stringify(data));    
-                        localStorage.setItem('profilePic',JSON.stringify(pics));
-                        done=false;
-                        break;
-                    }
-                }
-            }
+            deleteEmpData(val);
+            done=true;
         }
-        if(!done){
-            empTable.deleteRow(count);
+        if(done){
+            empTable.deleteRow(i);
             break;
         }
-        count+=1;
     }
-    window.location.href='Employee.html';
+    // window.location.href='Employee.html';
 }
 
 function checkBoxChecker(){
@@ -543,7 +456,6 @@ function checkBoxChecker(){
     else{
         document.getElementsByClassName('delete-btn')[0].style.backgroundColor='';
     }
-
     // document.getElementsByClassName('delete-btn')[0].style.backgroundColor = chck[0].checked ? 'rgba(244,72,72)' : '';
 }
 
@@ -553,24 +465,8 @@ function sortEmpData(ind,parameter,compare){
     var tableRows=empTable.rows;
     var len=tableRows.length;
     var doAgain=true;
-    var first,second,temp;
+    var first,second;
     if(flag==compare){
-        // var n=Math.floor((len-1)/2);
-        // for(i=1;i<n;i++){
-        //     var done1=false;
-        //     var done2=false;
-        //     temp=tableRows[i].innerHTML;
-        //     tableRows[i].innerHTML=tableRows[len-i].innerHTML;
-        //     tableRows[len-i].innerHTML=temp;
-        //     if(tableRows[i].hidden){
-        //         done1=true;
-        //     }
-        //     if(tableRows[len-i].hidden){
-        //         done2=true;
-        //     }
-        //     tableRows[len-i].hidden=done1;
-        //     tableRows[i].hidden=done2;
-        // }
         switch(ind){
             case 1:
                 while(doAgain){
@@ -578,9 +474,17 @@ function sortEmpData(ind,parameter,compare){
                     for(let i=1;i<len-1;i++){
                         first=tableRows[i].getElementsByClassName(parameter)[0].textContent.toLowerCase();
                         second=tableRows[i+1].getElementsByClassName(parameter)[0].textContent.toLowerCase();
-                        if(first<second){
-                            doAgain=true;
-                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                        if(flag==compare){
+                            if(first<second){
+                                doAgain=true;
+                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                            }
+                        }
+                        else{
+                            if(first>second){
+                                doAgain=true;
+                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                            }
                         }
                     }
                 }
@@ -591,9 +495,17 @@ function sortEmpData(ind,parameter,compare){
                     for(let i=1;i<len-1;i++){
                         first=tableRows[i].getElementsByTagName('td')[parameter].textContent.toLowerCase();
                         second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent.toLowerCase();
-                        if(first<second){
-                            doAgain=true;
-                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                        if(flag==compare){
+                            if(first<second){
+                                doAgain=true;
+                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                            }
+                        }
+                        else{
+                            if(first>second){
+                                doAgain=true;
+                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                            }
                         }
                     }
                 }
@@ -606,9 +518,17 @@ function sortEmpData(ind,parameter,compare){
                         second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent;
                         first=new Date(first);
                         second=new Date(second);
-                        if(first<second){
-                            doAgain=true;
-                            tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                        if(flag==compare){
+                            if(first<second){
+                                doAgain=true;
+                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                            }
+                        }
+                        else{
+                            if(first>second){
+                                doAgain=true;
+                                tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
+                            }
                         }
                     }
                 }
@@ -616,49 +536,6 @@ function sortEmpData(ind,parameter,compare){
         }
         flag=-1;
         return;
-    }
-    switch(ind){
-        case 1:
-            while(doAgain){
-                doAgain=false;
-                for(let i=1;i<len-1;i++){
-                    first=tableRows[i].getElementsByClassName(parameter)[0].textContent.toLowerCase();
-                    second=tableRows[i+1].getElementsByClassName(parameter)[0].textContent.toLowerCase();
-                    if(first>second){
-                        doAgain=true;
-                        tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                    }
-                }
-            }
-        break;
-        case 2:
-            while(doAgain){
-                doAgain=false;
-                for(let i=1;i<len-1;i++){
-                    first=tableRows[i].getElementsByTagName('td')[parameter].textContent.toLowerCase();
-                    second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent.toLowerCase();
-                    if(first>second){
-                        doAgain=true;
-                        tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                    }
-                }
-            }
-        break;
-        case 3:
-            while(doAgain){
-                doAgain=false;
-                for(let i=1;i<len-1;i++){
-                    first=tableRows[i].getElementsByTagName('td')[parameter].textContent;
-                    second=tableRows[i+1].getElementsByTagName('td')[parameter].textContent;
-                    first=new Date(first);
-                    second=new Date(second);
-                    if(first>second){
-                        doAgain=true;
-                        tableRows[i].parentNode.insertBefore(tableRows[i+1],tableRows[i]);
-                    }
-                }
-            }
-        break;
     }
     flag=flag==compare?-1:compare;
 }
@@ -733,6 +610,12 @@ function editEmp(){
     window.location.href='Add_employee.html';
 }
 
+function viewEmp(){
+    localStorage.setItem('viewDetails',JSON.stringify(true));
+    storeRowDetails();
+    window.location.href='Add_employee.html';
+}
+
 function storeRowDetails(){
     var obj=new Object();
     var empId=row.getElementsByTagName('td')[5].innerHTML;
@@ -752,28 +635,6 @@ function storeRowDetails(){
     obj.loc= loc;
     obj.role= role;
     localStorage.setItem('rowData',JSON.stringify(obj));
-}
-function viewEmp(){
-    localStorage.setItem('viewDetails',JSON.stringify(true));
-    var obj=new Object();
-    var empId=row.getElementsByTagName('td')[5].innerHTML;
-    var eName=row.getElementsByClassName('emp-name')[0].innerHTML;
-    var empMail=row.getElementsByClassName('emp-mail')[0].innerHTML;
-    var jDate=row.getElementsByTagName('td')[7].innerHTML;
-    var empName=eName.split(" ");
-    var dept=row.getElementsByTagName('td')[3].innerHTML;
-    var loc=row.getElementsByTagName('td')[2].innerHTML;
-    var role=row.getElementsByTagName('td')[4].innerHTML;
-    obj.empId=empId;
-    obj.fName=empName[0];
-    obj.lName=empName[1];
-    obj.empMail=empMail;
-    obj.jDate=jDate;
-    obj.dept= dept;
-    obj.loc= loc;
-    obj.role= role;
-    localStorage.setItem('rowData',JSON.stringify(obj));
-    window.location.href='Add_employee.html';
 }
 
 function showDeletePopup(){
