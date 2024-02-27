@@ -9,12 +9,12 @@ function empValidation(){
         for(i=0;i<elements.length;i++){
             if(elements[i].value.length==0 || msg[i].style.visibility=='visible'){
                 count+=1;
-                msg[i].style.visibility='visible';
-                elements[i].style.borderColor='red';
+                msg[i].classList.add('msg-visible')
+                elements[i].classList.add('msg-color-red');
             }
             else{
-                msg[i].style.visibility='hidden';
-                elements[i].style.borderColor='black';
+                msg[i].classList.remove('msg-visible');
+                elements[i].classList.remove('msg-color-red');
             }
         }
         if(document.getElementById('profile-pic').files.length>0){

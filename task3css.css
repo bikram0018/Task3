@@ -1028,3 +1028,24 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 1.2em;
     margin-bottom: 0.2em;
 }
+
+.active{
+    background-color:rgb(244,72,72);
+    color: white;
+}
+
+.reduce-opacity{
+    opacity: 0.5;
+}
+
+.normal-opacity{
+    opacity: 1;
+}
+
+.msg-visible{
+    visibility:visible;
+}
+
+.msg-color-red{
+    border-color: red;
+}
