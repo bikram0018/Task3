@@ -1,7 +1,7 @@
 addEventListener("DOMContentLoaded",()=>{
     showSelectOptions();
     var editData=localStorage.getItem('editEmpDetails');
-    viewData=JSON.parse(editData);
+    editData=JSON.parse(editData);
     if(editData){
         localStorage.setItem('editEmpDetails',JSON.stringify(false));
         displayEmpDetails();
