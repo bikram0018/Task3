@@ -77,9 +77,11 @@ function empValidation(){
 
 function unique(value){
     var data=localStorage.getItem('newEmpData');
+    var rowData=localStorage.getItem('rowData');
     data=JSON.parse(data);
+    rowData=JSON.parse(rowData);
     for(let i=0;i<data.length;i++){
-        if(Object.values(data[i]).includes(value)){
+        if(Object.values(data[i]).includes(value) && !Object.values(rowData).includes(value)){
             return true;
         }
     }
@@ -144,12 +146,8 @@ function validateMobileNumber(){
     val=ele.getElementsByTagName('input')[0].value;
     var exp=/[0-9]{10}/;
     len=val.length;
-    var uData=unique(val);
     if(len>0){
         if(len<10 || len>10){
-            ele.getElementsByTagName('p')[0].style.visibility='visible';
-        }
-        else if(uData){
             ele.getElementsByTagName('p')[0].style.visibility='visible';
         }
         else if(exp.test(val)){
@@ -203,67 +201,9 @@ function showErrorMsg(errorMsg,ele){
     para.style.visibility='visible';
 }
 
-// function validateAll(){
-
-//     var ele=document.getElementsByClassName('emp-no-container')[0];
-//     val=ele.getElementsByTagName('input')[0].value;
-//     var exp=/[A-Z0-9]{8}/;
-//     if(!exp.test(val)){
-//         ele.getElementsByTagName('p')[0].style.visibility='visible';
-//     }
-//     else{
-//         ele.getElementsByTagName('p')[0].style.visibility='hidden';
-//     }
-
-
-//     // class name to be added to complete the code
-
-//     // var ele=document.getElementsByClassName(name)[0];
-//     // val=ele.getElementsByTagName('input')[0].value;
-//     // var exp=/[^A-Za-z]+/;
-//     // if(exp.test(val) || val.length==0){
-//     //     ele.getElementsByTagName('p')[0].style.visibility='visible';
-//     // }
-//     // else{
-//     //     ele.getElementsByTagName('p')[0].style.visibility='hidden';
-//     // }
-
-//     // var ele=document.getElementsByClassName(name)[0];
-//     // val=ele.getElementsByTagName('input')[0].value;
-//     // var exp=/[^A-Za-z]+/;
-//     // if(exp.test(val) || val.length==0){
-//     //     ele.getElementsByTagName('p')[0].style.visibility='visible';
-//     // }
-//     // else{
-//     //     ele.getElementsByTagName('p')[0].style.visibility='hidden';
-//     // }
-
-
-
-//     var ele=document.getElementsByClassName('emp-mail-container')[0];
-//     val=ele.getElementsByTagName('input')[0].value;
-//     var exp= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//     if(!exp.test(val)){
-//         ele.getElementsByTagName('p')[0].style.visibility='visible';
-//     }
-//     else{
-//         ele.getElementsByTagName('p')[0].style.visibility='hidden';
-//     }
-
-//     var ele=document.getElementsByClassName('mobile-number-container')[0];
-//     val=ele.getElementsByTagName('input')[0].value;
-//     var exp=/[0-9]{10}/;
-//     len=val.length;
-//     if((exp.test(val)  && (len>10)) || (!exp.test(val))){
-//         ele.getElementsByTagName('p')[0].style.visibility='visible';
-//     }
-//     else{
-//         ele.getElementsByTagName('p')[0].style.visibility='hidden';
-//     }
-// }
-
 function errorHidden(name){
     document.getElementsByClassName(name)[0].getElementsByTagName('p')[0].style.visibility='hidden';
+    document.getElementsByClassName(name)[0].getElementsByTagName('input')[0].style.borderColor='black';
 }
 
 function changeProfilepic(){
@@ -282,7 +222,7 @@ function changeProfilepic(){
     return empImg.src;
 }
 
-function updateOptions(){
+function showSelectOptions(){
     var dept=document.getElementsByClassName('emp-info-input')[2];
     var loc=document.getElementsByClassName('emp-info-input')[0];
     var jTitle=document.getElementsByClassName('emp-info-input')[1];

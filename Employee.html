@@ -6,11 +6,10 @@
         <link rel="stylesheet" href="task3css.css">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
-        <script type="text/javascript" src="./scripts/onclickEvents.js"></script>
+        <script type="text/javascript" src="./scripts/employee.js"></script>
         <script type="text/javascript" src="./scripts/stablePane.js"></script>
         <script type="text/javascript" src="./scripts/paneShrinkExpand.js"></script>
     </head>
-
     <body>
         <div class="tezo-portal">
             <div class="left-pane">
@@ -61,7 +60,6 @@
                 <img src="./images/Horizontal nav/Roles.svg" alt="roles" class="shrink-role-icons" onclick="window.location.href='Roles.html'"><br>
                 <img src="./images/Horizontal nav/assign user.svg" alt="employees" class="shrink-role-icons">
             </div>
-
             <div class="right-pane">
 
                 <div class="pop-up-container">
@@ -69,7 +67,6 @@
                         <h3 class="popup-text">Employee Added Successfully</h3>
                     </div>
                 </div>
-
                 
                 <div class="search-bar">
                     <input type="text" class="search-inp" placeholder="Search">
@@ -97,7 +94,7 @@
                 <p class="emp-sub-txt">Find all of your company's employees accounts and their associated roles</p>
 
                 <div class="char-find">
-                    <img src="./images/Interface/filter-black.svg" alt="filter logo" class="filter-logo pointer" onclick="stopFilter()">
+                    <img src="./images/Interface/filter-black.svg" alt="filter logo" class="filter-logo pointer" onclick="clearFilter()">
                 </div>
                 <script>
                     function createCharButton(char) {
@@ -105,9 +102,8 @@
                         button.classList.add('char-btn');
                         button.textContent = char;
                         button.addEventListener('click', function() {
-                            buttonCharFind(char);
+                            alphabetEmpSearch(char);
                         });
-
                         return button;
                     }
                     const charFindContainer = document.querySelector('.char-find');
@@ -116,7 +112,6 @@
                         charFindContainer.appendChild(createCharButton(char));
                     }
                 </script>
-
                 <div class="filter-container">
                     <div class="filter-logo-container">
                         <p class="filter-txt">Filter <span><img src="./images/filter-lines.svg" alt="filter lines" class="filter-logo pointer"></span></p>
@@ -124,39 +119,29 @@
                             <button name="status" class="filter-ele pointer" onclick="displayDropDown(0)">
                                 Status <p class="opt-count"></p><span><img src="./images/drop-down-25.svg" alt="drop down" class="drop-down-img"></span>
                             </button>
-                            <div class="select-options">
-                                <div class="option-flex" onclick="revealResetApplyButtons()">
-                                    <label class="option-text" for="active">Active</label>
-                                    <input id="active" type="checkbox"/>
-                                </div>
-                                <div class="option-flex" onclick="revealResetApplyButtons()">
-                                    <label class="option-text" for="inactive">Inactive</label>
-                                    <input id="inactive" type="checkbox"/>
-                                </div>
+                            <div class="select-options status">
                             </div>
                         </div>
-
                         <div class="dropdown">
                             <button name="Location" class="filter-ele pointer location-filter" onclick="displayDropDown(1)">
                                 Location <p class="opt-count"></p><span><img src="./images/drop-down-25.svg" alt="drop down" class="drop-down-img"></span>
                             </button>
-                            <div class="select-options">
+                            <div class="select-options location">
                             </div>
                         </div>
                         <div class="dropdown">
                             <button name="Department" class="filter-ele pointer department-filter" onclick="displayDropDown(2)">
                                 Department <p class="opt-count"></p><span><img src="./images/drop-down-25.svg" alt="drop down" class="drop-down-img"></span>
                             </button>
-                            <div class="select-options">
+                            <div class="select-options department">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <button class="reset-btn pointer" onclick="filterReset()" disabled>Reset</button>
+                        <button class="reset-btn pointer" onclick="resetFilter()" disabled>Reset</button>
                         <button class="apply-btn pointer" onclick="filterSearch()" disabled>Apply</button>
                     </div>
                 </div>
-
                 <!-- delete pop up generator -->
                 <div class="pop-up-container">
                     <div class="delete-popup-container">
@@ -170,7 +155,6 @@
                         <p class="success-del-msg">Data Deleted Successfully</p>
                     </div>
                 </div>
-
 
                 <div class="emp-details-container">
                     <div class="del-container">
@@ -201,18 +185,11 @@
                         <div class="edit-container">
                             <a href="#" class="edit-opt" onclick="viewEmp()">View Details</a>
                             <a href="#" class="edit-opt" onclick="editEmp()">Edit</a>
-                            <a href="#" class="edit-opt" onclick="optionalDelete()">Delete</a>
+                            <a href="#" class="edit-opt" onclick="deleteEmpData()">Delete</a>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
-
-
     </body>
-
-
 </html>

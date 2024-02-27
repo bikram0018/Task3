@@ -1,9 +1,9 @@
 addEventListener("DOMContentLoaded",()=>{
-    updateOptions();
-    var fun=localStorage.getItem('runFuntion');
-    fun=JSON.parse(fun);
-    if(fun){
-        localStorage.setItem('runFuntion',JSON.stringify(false));
+    showSelectOptions();
+    var editData=localStorage.getItem('editEmpDetails');
+    viewData=JSON.parse(editData);
+    if(editData){
+        localStorage.setItem('editEmpDetails',JSON.stringify(false));
         displayEmpDetails();
         var ele=document.getElementsByClassName('add-emp-add-emp-btn')[0];
         ele.classList='add-emp-save-btn';
@@ -12,9 +12,9 @@ addEventListener("DOMContentLoaded",()=>{
         document.getElementsByClassName('main-add-employee-text')[0].innerHTML='Update Employee';
     }
 
-    var fun=localStorage.getItem('viewDetails');
-    fun=JSON.parse(fun);
-    if(fun){
+    var viewData=localStorage.getItem('viewDetails');
+    viewData=JSON.parse(viewData);
+    if(viewData){
         localStorage.setItem('viewDetails',JSON.stringify(false));
         displayEmpDetails();
         document.getElementById('profile-pic').disabled=true;
